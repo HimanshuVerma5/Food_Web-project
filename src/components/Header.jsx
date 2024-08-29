@@ -2,10 +2,16 @@ import { useState } from "react";
 import { LOGO_URL } from "../utilis/contants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilis/useOnlineStatus";
+import { useDispatch, useSelector } from "react-redux";
+import { addItems } from "../utilis/cartSlice";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("login");
   const onlineStatus = useOnlineStatus();
+  //Here we subscribing the store using Selector
+  const cartItems=useSelector((store)=>store.cart.items);
+  console.log(cartItems);
+ 
 
   return (
     <div className="sticky top-0 z-50 flex justify-between items-center shadow-lg mb-9 px-6 h-24" style={{ backgroundColor: '#E9BAC7' }}>
@@ -30,6 +36,12 @@ const Header = () => {
           <li>
             <Link to="/contact" className="hover:text-blue-500 transition-colors duration-200">
               Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/card" className="hover:text-blue-500 transition-colors duration-200 font-bold"
+            >
+            🛒-{cartItems.length}
             </Link>
           </li>
           <li>

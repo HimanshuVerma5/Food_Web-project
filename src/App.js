@@ -7,7 +7,9 @@ import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-
+import Card from "./components/Card";
+import { Provider } from "react-redux";
+import appStore from "./utilis/appStore";
 
 
 
@@ -15,10 +17,12 @@ import Error from "./components/Error";
 
 const AppLayout = () => {
   return (
+    <Provider store={appStore}>
     <div className="app">
       <Header />
       <Outlet />
     </div>
+    </Provider>
   );
 };
 const appRouter=createBrowserRouter([
@@ -37,6 +41,10 @@ const appRouter=createBrowserRouter([
   {
     path:"/contact",
     element:<Contact/>,
+  },
+  {
+    path:"/card",
+    element:<Card/>,
   },
   {
     path:"/restaurants/:resId",

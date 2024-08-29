@@ -13,7 +13,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
               placeholder="Your Name"
             />
           </div>
@@ -24,7 +24,7 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
               placeholder="Your Email"
             />
           </div>
@@ -34,14 +34,14 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
               rows="5"
               placeholder="Your Message"
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition duration-300"
+            className="w-full bg-pink-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition duration-300"
           >
             Send Message
           </button>
@@ -50,7 +50,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold">Contact Information</h2>
           <p className="text-lg text-gray-700 mt-2">Email: himanshuverma57251@gmail.com</p>
           <p className="text-lg text-gray-700">Phone: +91 95360 45394</p>
-          <p className="text-lg text-gray-700">Business: Food Ordering Website</p>
+          <p className="text-lg text-gray-700">Business: Food Ordering </p>
         </div>
       </div>
     );
